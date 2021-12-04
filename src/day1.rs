@@ -1,10 +1,6 @@
-use std::fs::File;
-use std::io::{self, BufRead};
-use std::path::Path;
-
 fn solve_puzzle(_magic_num: usize) -> i32 {
     let mut ret: i32 = 0;
-    if let Ok(lines) = read_lines("./testfile/hosts") {
+    if let Ok(lines) = super::utils::io::read_lines("./testfile/hosts") {
         // Consumes the iterator, returns an (Optional) String
         let mut depths = vec![0; _magic_num];
         // let mut depths: [i32; _magic_num] = [0; _magic_num];
@@ -31,14 +27,4 @@ fn solve_puzzle(_magic_num: usize) -> i32 {
 pub fn run() {
     println!("The answer of Puzzle 1 is: {}", solve_puzzle(2));
     println!("The answer of Puzzle 2 is: {}", solve_puzzle(4));
-}
-
-// The output is wrapped in a Result to allow matching on errors
-// Returns an Iterator to the Reader of the lines of the file.
-fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
-where
-    P: AsRef<Path>,
-{
-    let file = File::open(filename)?;
-    Ok(io::BufReader::new(file).lines())
 }
