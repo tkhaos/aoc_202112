@@ -1,6 +1,8 @@
+use super::super::utils;
+
 fn solve_puzzle(_magic_num: usize) -> i32 {
     let mut ret: i32 = 0;
-    if let Ok(lines) = super::utils::io::read_lines("./testfile/hosts") {
+    if let Ok(lines) = utils::io::read_lines("./testfile/hosts") {
         // Consumes the iterator, returns an (Optional) String
         let mut depths = vec![0; _magic_num];
         // let mut depths: [i32; _magic_num] = [0; _magic_num];

@@ -1,7 +1,9 @@
+use super::super::utils;
+
 fn solve_puzzle() -> i32 {
     let mut horizon: i32 = 0;
     let mut depth: i32 = 0;
-    if let Ok(lines) = super::utils::io::read_lines("./testfile/day2_1") {
+    if let Ok(lines) = utils::io::read_lines("./testfile/day2_1") {
         for line in lines {
             if let Ok(ip) = line {
                 let vec: Vec<&str> = ip.split(" ").collect();
@@ -30,7 +32,7 @@ fn solve_puzzle_2() -> i32 {
     let mut horizon: i32 = 0;
     let mut depth: i32 = 0;
     let mut aim: i32 = 0;
-    if let Ok(lines) = super::utils::io::read_lines("./testfile/day2_2") {
+    if let Ok(lines) = utils::io::read_lines("./testfile/day2_2") {
         for line in lines {
             if let Ok(ip) = line {
                 let vec: Vec<&str> = ip.split(" ").collect();
