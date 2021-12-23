@@ -1,4 +1,4 @@
-use super::super::utils;
+use crate::utils;
 
 fn solve_puzzle(_magic_num: usize) -> i32 {
     let mut ret: i32 = 0;

@@ -1,4 +1,4 @@
-use super::super::utils;
+use crate::utils;
 
 fn solve_puzzle() -> u32 {
     if let Ok(lines) = utils::io::read_lines("./testfile/day3_1") {

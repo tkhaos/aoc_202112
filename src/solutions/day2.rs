@@ -1,4 +1,4 @@
-use super::super::utils;
+use crate::utils;
 
 fn solve_puzzle() -> i32 {
     let mut horizon: i32 = 0;
